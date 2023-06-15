@@ -21,10 +21,6 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-		<!-- 컬러 팔레트 -->
-		<script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
-
 		<!-- 스타일 -->
 		<link href="css/reset.css" rel="stylesheet">
 		<link href="css/common.css" rel="stylesheet">
@@ -372,7 +368,6 @@
 							</li>
 							<li>
 								<p class="form_tit">색상</p>
-								<input id='colorpicker' name='colorpicker' required />
 							</li>
 							<li>
 								<div class="chk_wrap">
@@ -406,12 +401,7 @@
 			function popClose(){
 				// $('html, body').css('overflow-y','visible');
 				$('.pop_wrap').fadeOut(100);
-			}
-
-			// 컬러 팔레트
-			$("#colorpicker").spectrum({
-				color: "#4287f5"
-			});
+			}			
 		</script>
     </body>
 </html>

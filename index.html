@@ -21,10 +21,6 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-		<!-- 컬러 팔레트 -->
-		<script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
-
 		<!-- 스타일 -->
 		<link href="css/reset.css" rel="stylesheet">
 		<link href="css/common.css" rel="stylesheet">
@@ -317,7 +313,92 @@
 							</li>
 							<li>
 								<p class="form_tit">색상</p>
-								<input id='colorpicker' name='colorpicker' required />
+								<button class="ab form_sel">
+									<div class="circ c1"></div>
+									<div class="text">베리 레드</div>
+								</button>
+								<ul class="form_select">
+									<li>
+										<div class="circ c1"></div>
+										<div class="text">베리 레드</div>
+									</li>
+									<li>
+										<div class="circ c2"></div>
+										<div class="text">레드</div>
+									</li>
+									<li>
+										<div class="circ c3"></div>
+										<div class="text">오렌지</div>
+									</li>
+									<li>
+										<div class="circ c4"></div>
+										<div class="text">옐로우</div>
+									</li>
+									<li>
+										<div class="circ c5"></div>
+										<div class="text">올리브 그린</div>
+									</li>
+									<li>
+										<div class="circ c6"></div>
+										<div class="text">라임 그린</div>
+									</li>
+									<li>
+										<div class="circ c7"></div>
+										<div class="text">그린</div>
+									</li>
+									<li>
+										<div class="circ c8"></div>
+										<div class="text">민트 그린</div>
+									</li>
+									<li>
+										<div class="circ c9"></div>
+										<div class="text">틸</div>
+									</li>
+									<li>
+										<div class="circ c10"></div>
+										<div class="text">스카이 블루</div>
+									</li>
+									<li>
+										<div class="circ c11"></div>
+										<div class="text">라이트 블루</div>
+									</li>
+									<li>
+										<div class="circ c12"></div>
+										<div class="text">블루</div>
+									</li>
+									<li>
+										<div class="circ c13"></div>
+										<div class="text">그레이프</div>
+									</li>
+									<li>
+										<div class="circ c14"></div>
+										<div class="text">바이올렛</div>
+									</li>
+									<li>
+										<div class="circ c15"></div>
+										<div class="text">라벤더</div>
+									</li>
+									<li>
+										<div class="circ c16"></div>
+										<div class="text">마젠타</div>
+									</li>
+									<li>
+										<div class="circ c17"></div>
+										<div class="text">새먼</div>
+									</li>
+									<li>
+										<div class="circ c18"></div>
+										<div class="text">챠콜</div>
+									</li>
+									<li>
+										<div class="circ c19"></div>
+										<div class="text">그레이</div>
+									</li>
+									<li>
+										<div class="circ c20"></div>
+										<div class="text">토프</div>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<div class="chk_wrap">
@@ -360,12 +441,7 @@
 
 				$('.tabcontent').removeClass('active');
 				$('.tabcontent'+v).addClass('active');
-			}
-
-			// 컬러 팔레트
-			$("#colorpicker").spectrum({
-				color: "#4287f5"
-			});
+			}			
 		</script>
     </body>
 </html>

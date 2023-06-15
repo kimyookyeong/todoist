@@ -76,15 +76,35 @@
 .pop_main .form_list > li + li {margin-top: 20px;}
 .pop_main .form_list > li .form_tit {font-size: 14px; font-weight: 600; margin-bottom: 10px;}
 .pop_main .form_list > li input[type="text"] {width: 100%; height: 40px; padding: 0 10px; border-radius: 5px; border: 1px solid #ddd; font-size: 14px;}
-.pop_main .form_list > li input[type="text"]:focus {border: 1px solid #000;}
+.pop_main .form_list > li input[type="text"]:focus,
+.pop_main .form_list > li .form_sel {border: 1px solid #000;}
 
-.sp-original-input-container {width: 100%;}
-.sp-colorize-container,
-.sp-original-input-container .sp-add-on {border: 0 !important; margin-right: 10px; min-width: 40px; width: 40px; height: 40px; border-top-right-radius: 5px !important; border-bottom-right-radius: 5px !important;}
-.sp-original-input-container input,
-.sp-original-input-container input.spectrum.with-add-on {width: calc(100% - 50px); cursor: pointer; padding: 0 10px; border-radius: 5px; border: 1px solid #ddd; font-size: 14px; transition: all 0.3s; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-left: 1px solid #ddd;}
-.sp-original-input-container input:focus,
-.sp-original-input-container input.spectrum.with-add-on:focus {border: 1px solid #000;}
+.pop_main .form_list > li .form_sel {border: 1px solid #ddd; border-radius: 5px; display: flex; align-items: center; padding: 0 10px; height: 30px; width: 100%;}
+.pop_main .form_list > li .form_select {height: 300px; overflow-y: scroll; border: 1px solid #ddd; border-radius: 5px;}
+.pop_main .form_list > li .form_select > li {display: flex; align-items: center; height: 30px; cursor: pointer; padding: 0 10px;}
+.pop_main .form_list > li .form_select > li:hover {background-color: #eee;}
+.pop_main .form_list > li .circ {display: block; width: 12px; height: 12px; border-radius: 50%; margin-right: 10px;}
+.pop_main .form_list > li .circ.c1 {background-color: #B8256F;}
+.pop_main .form_list > li .circ.c2 {background-color: #DB4035;}
+.pop_main .form_list > li .circ.c3 {background-color: #FF9933;}
+.pop_main .form_list > li .circ.c4 {background-color: #FAD000;}
+.pop_main .form_list > li .circ.c5 {background-color: #AFB83B;}
+.pop_main .form_list > li .circ.c6 {background-color: #7ECC49;}
+.pop_main .form_list > li .circ.c7 {background-color: #299438;}
+.pop_main .form_list > li .circ.c8 {background-color: #6ACCBC;}
+.pop_main .form_list > li .circ.c9 {background-color: #158FAD;}
+.pop_main .form_list > li .circ.c10 {background-color: #14AAF5;}
+.pop_main .form_list > li .circ.c11 {background-color: #96C3EB;}
+.pop_main .form_list > li .circ.c12 {background-color: #4073FF;}
+.pop_main .form_list > li .circ.c13 {background-color: #884DFF;}
+.pop_main .form_list > li .circ.c14 {background-color: #AF38EB;}
+.pop_main .form_list > li .circ.c15 {background-color: #EB96EB;}
+.pop_main .form_list > li .circ.c16 {background-color: #E05194;}
+.pop_main .form_list > li .circ.c17 {background-color: #FF8D85;}
+.pop_main .form_list > li .circ.c18 {background-color: #808080;}
+.pop_main .form_list > li .circ.c19 {background-color: #B8B8B8;}
+.pop_main .form_list > li .circ.c20 {background-color: #CCAC93;}
+.pop_main .form_list > li .text {font-size: 14px;}
 
 .pop_footer {border-top: 1px solid #ddd; padding: 20px;}
 .pop_footer .btn_wrap {display: flex; justify-content: flex-end;}
