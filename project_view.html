@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="UTF-8">
+
+        <title>Todoist - project view</title>
+
+		<!-- 제이쿼리 -->
+		<script src="https://code.jquery.com/jquery-3.7.0.js" crossorigin="anonymous"></script>
+
+		<!-- 폰트 -->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+		<!-- 아이콘 -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+		<!-- 스와이퍼 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+		<!-- 컬러 팔레트 -->
+		<script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
+
+		<!-- 스타일 -->
+		<link href="css/reset.css" rel="stylesheet">
+		<link href="css/common.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+		<!-- 헤더 -->
+		<header class="header">
+			<div class="hd_wrap">
+				<div class="hd_left">
+					<ul class="nav_ul">
+						<li>
+							<a href="" class="ab hd_btn">
+								<span class="material-symbols-outlined">menu</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="ab hd_btn">
+								<span class="material-symbols-outlined">home</span>
+							</a>
+						</li>
+					</ul>
+					<div class="hd_search">
+						<label for="search">
+							<span class="material-symbols-outlined">search</span>
+						</label>
+						<input type="search" id="search" name="" placeholder="검색">
+					</div>
+				</div>
+				<div class="hd_right">
+					<ul class="menu_ul">
+						<li>
+							<a href="" class="ab hd_btn">
+								<span class="material-symbols-outlined">add</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="ab hd_btn">
+								<span class="material-symbols-outlined">notifications</span>
+							</a>
+						</li>
+						<li>
+							<a href="" class="ab">
+								<div class="name_icon">
+									<span class="name">이름</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- 좌측 사이드 네비 -->
+		<nav class="side_nav">
+			<div class="side_wrap">
+				<ul class="nav_top">
+					<li>
+						<a href="" class="ab">
+							<div class="icon"><span class="material-symbols-outlined">calendar_month</span></div>
+							<p class="text">캘린더</p>
+						</a>
+					</li>
+					<li>
+						<a href="" class="ab">
+							<div class="icon"><span class="material-symbols-outlined">fact_check</span></div>
+							<p class="text">완료한 작업</p>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav_project">
+					<li class="tit_li">
+						<div class="list_left">
+							<a href="" class="ab nav_title">프로젝트</a>
+						</div>
+						<div class="list_right">
+							<a onClick="popOpen1();" class="ab add">
+								<span class="material-symbols-outlined">add</span>
+							</a>
+						</div>
+					</li>
+					<li class="active">
+						<div class="list_left">
+							<a href="" class="ab">
+								<div class="circ"><span class="c1"></span></div>
+								<div class="subj">자택</div>
+								<div class="icon"><span class="material-symbols-outlined">house</span></div>
+								<div class="numb">6</div>
+							</a>
+						</div>
+						<div class="list_right">
+							<a href="" class="ab more">
+								<span class="material-symbols-outlined">more_horiz</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="list_left">
+							<a href="" class="ab">
+								<div class="circ"><span class="c2"></span></div>
+								<div class="subj">회사</div>
+								<div class="icon"><span class="material-symbols-outlined">apartment</span></div>
+								<div class="numb">3</div>
+							</a>
+						</div>
+						<div class="list_right">
+							<a href="" class="ab more">
+								<span class="material-symbols-outlined">more_horiz</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- 메인 화면 -->
+		<section class="main">
+			<article class="project_hd">
+				<div class="tit_wrap">
+					<div class="tit_box">
+						<div class="tit_text">자택</div>
+						<div class="tit_icon"><span class="material-symbols-outlined">house</span></div>
+					</div>
+				</div>
+				<div class="project_menu">
+					<ul class="menu_list">
+						<li>
+							<a href="" class="ab">
+								<div class="icon"><span class="material-symbols-outlined">person_add</span></div>
+								<p class="text">공유</p>
+							</a>
+						</li>
+						<li>
+							<a href="" class="ab">
+								<div class="icon"><span class="material-symbols-outlined">forum</span></div>
+								<p class="text">댓글</p>
+							</a>
+						</li>
+						<li>
+							<a href="" class="ab">
+								<div class="icon"><span class="material-symbols-outlined">more_horiz</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+			<article class="project_main">
+				<ul class="project_list"> <!-- 섹션 -->
+					<li>
+						<div class="project_tit">
+							<div class="tit_left">
+								<div class="tit_txtbox">
+									<div class="title">첫 과제</div>
+									<div class="icon"><span class="material-symbols-outlined">rewarded_ads</span></div>
+								</div>
+								<div class="num">1</div>
+							</div>
+							<div class="tit_right">
+								<a href="" class="ab more">
+									<span class="material-symbols-outlined">more_horiz</span>
+								</a>
+							</div>
+						</div>
+						<ul class="project_cont"> <!-- 작업 -->
+							<li>
+								<a href="" class="ab">
+									<div class="ipt">
+										<div class="chk_wrap">
+											<input type="checkbox" id="complete1">
+											<label for="complete1" class="chk_box"><span class="material-icons">check</span></label>
+										</div>
+									</div>
+									<div class="cnt">
+										<div class="subj">모든 개인 작업 추가</div>
+										<div class="date">
+											<div class="icon"><span class="material-symbols-outlined">event</span></div>
+											<div class="numb">0월 0일</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="project_add">
+							<a href="" class="ab">
+								<div class="icon"><span class="material-symbols-outlined">add_circle</span></div>
+								<div class="text">작업 추가</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="project_tit">
+							<div class="tit_left">
+								<div class="tit_txtbox">
+									<div class="title">루틴</div>
+									<div class="icon"><span class="material-symbols-outlined">routine</span></div>
+								</div>
+								<div class="num">3</div>
+							</div>
+							<div class="tit_right">
+								<a href="" class="ab more">
+									<span class="material-symbols-outlined">more_horiz</span>
+								</a>
+							</div>
+						</div>
+						<ul class="project_cont"> <!-- 작업 -->
+							<li>
+								<a href="" class="ab">
+									<div class="ipt">
+										<div class="chk_wrap">
+											<input type="checkbox" id="complete2">
+											<label for="complete2" class="chk_box"><span class="material-icons">check</span></label>
+										</div>
+									</div>
+									<div class="cnt">
+										<div class="subj">작업 및 목표 매주 검토</div>
+										<div class="date today">
+											<div class="icon"><span class="material-symbols-outlined">event</span></div>
+											<div class="numb">오늘</div>
+											<div class="icon icon_re"><span class="material-symbols-outlined">cycle</span></div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="" class="ab">
+									<div class="ipt">
+										<div class="chk_wrap">
+											<input type="checkbox" id="complete3">
+											<label for="complete3" class="chk_box"><span class="material-icons">check</span></label>
+										</div>
+									</div>
+									<div class="cnt">
+										<div class="subj">방 청소</div>
+										<div class="date yesterday">
+											<div class="icon"><span class="material-symbols-outlined">event</span></div>
+											<div class="numb">어제</div>
+											<div class="icon icon_re"><span class="material-symbols-outlined">cycle</span></div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="" class="ab">
+									<div class="ipt">
+										<div class="chk_wrap">
+											<input type="checkbox" id="complete4">
+											<label for="complete4" class="chk_box"><span class="material-icons">check</span></label>
+										</div>
+									</div>
+									<div class="cnt">
+										<div class="subj">그 밖의 개인 루틴 추가</div>
+										<div class="desc">매년 세금 납부, 매주 쓰레기통 비우기, 평일 오전 9시 10분에 명상</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="project_add">
+							<a href="" class="ab">
+								<div class="icon"><span class="material-symbols-outlined">add_circle</span></div>
+								<div class="text">작업 추가</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="project_tit">
+							<div class="tit_left">
+								<div class="tit_txtbox">
+									<div class="title">영감</div>
+									<div class="icon"><span class="material-symbols-outlined">tips_and_updates</span></div>
+								</div>
+								<div class="num">2</div>
+							</div>
+							<div class="tit_right">
+								<a href="" class="ab more">
+									<span class="material-symbols-outlined">more_horiz</span>
+								</a>
+							</div>
+						</div>
+						<ul class="project_cont"> <!-- 작업 -->
+							<li>
+								<a href="" class="ab">
+									<div class="ipt">
+										<div class="chk_wrap">
+											<input type="checkbox" id="complete5">
+											<label for="complete5" class="chk_box"><span class="material-icons">check</span></label>
+										</div>
+									</div>
+									<div class="cnt">
+										<div class="subj">(사용자가 제공한) Todoist와 함께 가족 할일 목록 체계화하기 (사용자가 제공한) Todoist와 함께 가족 할일 목록 체계화하기</div>
+										<div class="date">
+											<div class="icon"><span class="material-symbols-outlined">event</span></div>
+											<div class="numb">0월 0일</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="" class="ab">
+									<div class="ipt">
+										<div class="chk_wrap">
+											<input type="checkbox" id="complete6">
+											<label for="complete6" class="chk_box"><span class="material-icons">check</span></label>
+										</div>
+									</div>
+									<div class="cnt">
+										<div class="subj">Todoist의 선별된 개인 템플릿 살펴보기</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="project_add">
+							<a href="" class="ab">
+								<div class="icon"><span class="material-symbols-outlined">add_circle</span></div>
+								<div class="text">작업 추가</div>
+							</a>
+						</div>
+					</li>
+					<li class="add_li">
+						<div class="section_add">
+							<a href="" class="ab">
+								<div class="icon"><span class="material-symbols-outlined">playlist_add_circle</span></div>
+								<div class="text">섹션 추가</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<!-- 프로젝트 추가 팝업창 -->
+		<div id="pop_wrap1" class="pop_wrap">
+			<div class="pop_bg" onClick="popClose();"></div>
+			
+			<div class="pop_cont">
+				<div class="pop_header">
+					<h2>프로젝트 추가</h2>
+				</div>
+				<form method="" action="" id="">
+					<div class="pop_main">
+						<ul class="form_list">
+							<li>
+								<p class="form_tit">이름</p>
+								<input type="text" id="name" name="name" minlength="" maxlength="" required>
+							</li>
+							<li>
+								<p class="form_tit">색상</p>
+								<input id='colorpicker' name='colorpicker' required />
+							</li>
+							<li>
+								<div class="chk_wrap">
+									<input type="checkbox" id="favorites">
+									<label for="favorites" class="chk_box"><span class="material-icons">check</span></label>
+									<label for="favorites" class="chk_txt">즐겨찾기에 추가</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="pop_footer">
+						<ul class="btn_wrap">
+							<li>
+								<button class="ab pop_cancel" onClick="popClose();">취소</button>
+							</li>
+							<li>
+								<button class="ab pop_submit" onClick="">추가</button>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script>
+			// 팝업
+			function popOpen1(){
+				// $('html, body').css('overflow-y','hidden');
+				$('.pop_wrap').fadeIn(100);
+			}
+			function popClose(){
+				// $('html, body').css('overflow-y','visible');
+				$('.pop_wrap').fadeOut(100);
+			}
+
+			// 컬러 팔레트
+			$("#colorpicker").spectrum({
+				color: "#4287f5"
+			});
+		</script>
+    </body>
+</html>
