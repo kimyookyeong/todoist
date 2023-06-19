@@ -106,6 +106,9 @@
 .pop_main .form_list > li .circ.c20 {background-color: #CCAC93;}
 .pop_main .form_list > li .text {font-size: 14px;}
 
+.pop_main .pop_text {padding: 20px 0;}
+.pop_main .pop_text span {font-weight: 700;}
+
 .pop_footer {border-top: 1px solid #ddd; padding: 20px;}
 .pop_footer .btn_wrap {display: flex; justify-content: flex-end;}
 .pop_footer .btn_wrap > li {}

@@ -242,7 +242,7 @@
 													</a>
 												</li>
 												<li>
-													<a href="" class="ab">
+													<a onClick="popOpen2();" class="ab">
 														<div class="icon"><span class="material-symbols-outlined">delete</span></div>
 														<div class="text">프로젝트 삭제</div>
 													</a>
@@ -423,11 +423,41 @@
 			</div>
 		</div>
 
+		<!-- 프로젝트 삭제 팝업창 -->
+		<div id="pop_wrap2" class="pop_wrap">
+			<div class="pop_bg" onClick="popClose();"></div>
+			
+			<div class="pop_cont">
+				<div class="pop_header">
+					<h2>프로젝트 삭제</h2>
+				</div>
+				<form method="" action="" id="">
+					<div class="pop_main">
+						<div class="pop_text"><span>프로젝트 이름</span>를(을) 삭제하겠습니까?</div>
+					</div>
+					<div class="pop_footer">
+						<ul class="btn_wrap">
+							<li>
+								<button class="ab pop_cancel" onClick="popClose();">취소</button>
+							</li>
+							<li>
+								<button class="ab pop_submit" onClick="">삭제</button>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<script>
 			// 팝업
 			function popOpen1(){
 				// $('html, body').css('overflow-y','hidden');
-				$('.pop_wrap').fadeIn(100);
+				$('#pop_wrap1').fadeIn(100);
+			}
+			function popOpen2(){
+				// $('html, body').css('overflow-y','hidden');
+				$('#pop_wrap2').fadeIn(100);
 			}
 			function popClose(){
 				// $('html, body').css('overflow-y','visible');
