@@ -54,7 +54,7 @@
 				<div class="hd_right">
 					<ul class="menu_ul">
 						<li>
-							<a href="" class="ab hd_btn">
+							<a onClick="popOpen3();" class="ab hd_btn">
 								<span class="material-symbols-outlined">add</span>
 							</a>
 						</li>
@@ -449,6 +449,41 @@
 			</div>
 		</div>
 
+		<!-- 작업 추가 팝업창 -->
+		<div id="pop_wrap3" class="pop_wrap">
+			<div class="pop_bg" onClick="popClose();"></div>
+			
+			<div class="pop_cont">
+				<div class="pop_header">
+					<h2>작업 추가</h2>
+				</div>
+				<form method="" action="" id="">
+					<div class="pop_main">
+						<ul class="form_list">
+							<li>
+								<p class="form_tit">작업 이름</p>
+								<input type="text" id="name" name="name" minlength="" maxlength="" required>
+							</li>
+							<li>
+								<p class="form_tit">설명</p>
+								<input type="text" id="content" name="content" minlength="" maxlength="" required>
+							</li>
+						</ul>
+					</div>
+					<div class="pop_footer">
+						<ul class="btn_wrap">
+							<li>
+								<button class="ab pop_cancel" onClick="popClose();">취소</button>
+							</li>
+							<li>
+								<button class="ab pop_submit" onClick="">추가</button>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<script>
 			// 팝업
 			function popOpen1(){
@@ -458,6 +493,10 @@
 			function popOpen2(){
 				// $('html, body').css('overflow-y','hidden');
 				$('#pop_wrap2').fadeIn(100);
+			}
+			function popOpen3(){
+				// $('html, body').css('overflow-y','hidden');
+				$('#pop_wrap3').fadeIn(100);
 			}
 			function popClose(){
 				// $('html, body').css('overflow-y','visible');
