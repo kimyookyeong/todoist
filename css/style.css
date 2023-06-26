@@ -180,6 +180,12 @@
 .opt_ul > li .ab {display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; border-radius: 5px; border: 1px solid #ddd;}
 .opt_ul > li .ab span {display: block; font-size: 20px;}
 
+.priority_ul {}
+.priority_ul > li {display: flex;}
+.priority_ul > li .icon {}
+.priority_ul > li .icon span {}
+.priority_ul > li .text {}
+
 .main_btnul {display: flex;}
 .add_form_2 .main_btnul {justify-content: flex-end;}
 .main_btnul > li {}
