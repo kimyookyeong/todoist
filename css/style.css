@@ -143,7 +143,7 @@
 /* 섹션 리스트 */
 
 .project_list {display: flex; height: 100%;}
-.project_list > li {padding: 0 20px; border-right: 1px solid #ddd;}
+.project_list > li {padding: 0 20px; border-right: 1px solid #ddd; max-width: 300px;}
 .project_list > li.add_li {border-right: 0;}
 
 .project_tit {display: flex; align-items: center; justify-content: space-between;}
@@ -166,15 +166,25 @@
 .section_add .icon span {display: block; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;}
 .section_add .text {font-size: 14px;}
 
-/* 섹션 추가 */
+/* 섹션 & 작업 추가 */
 
 .add_form {margin-top: 20px;}
-.main_ipt {width: 100%; height: 40px; padding: 0 10px; border-radius: 5px; border: 1px solid #ddd; font-size: 14px;}
+.add_form_2 {border: 1px solid rgba(0, 0, 0, 0.4); border-radius: 10px; padding: 10px;}
+
+.main_ipt {width: 100%; height: 40px; padding: 0 10px; border-radius: 5px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 10px;}
 .main_ipt:focus {border: 1px solid #000;}
-.main_btnul {display: flex; margin-top: 10px;}
+
+.opt_ul {display: flex; margin-bottom: 10px;}
+.opt_ul > li {}
+.opt_ul > li + li {margin-left: 10px;}
+.opt_ul > li .ab {display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; border-radius: 5px; border: 1px solid #ddd;}
+.opt_ul > li .ab span {display: block; font-size: 20px;}
+
+.main_btnul {display: flex;}
+.add_form_2 .main_btnul {justify-content: flex-end;}
 .main_btnul > li {}
 .main_btnul > li + li {margin-left: 10px;}
-.main_btnul > li button {display: block; width: 70px; height: 30px; line-height: 30px; text-align: center; font-size: 14px; border-radius: 5px;}
+.main_btnul > li .ab {display: block; width: 70px; height: 30px; line-height: 30px; text-align: center; font-size: 14px; border-radius: 5px;}
 .main_btnul > li .main_sbtn {background-color: #000; color: #fff;}
 .main_btnul > li .main_cbtn {background-color: #ccc;}
 
